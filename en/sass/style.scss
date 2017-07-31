@@ -1,0 +1,421 @@
+$main-padding: 20px;
+
+$light-grey: rgb(240, 240, 240);
+$dark-grey: rgb(40, 40, 40);
+$red: #c5091d;
+$blue: #0857ad;
+
+body {
+	margin: 0;
+	color: $dark-grey;
+}
+
+.translate-buttons {
+	display: block;
+	position: relative;
+	text-align: center;
+
+	#translate-primary, #translate-secondary {
+		display: inline-block;
+		width: 27px;
+		height: 27px;
+		line-height: 27px;
+		margin: 0;
+		padding: 0;
+		min-width: 27px;
+		// border: 1px solid black;
+		color: black;
+		font-size: 0.8em;
+		text-align: center;
+		
+	}
+}
+
+#site-wrapper {
+	-webkit-box-shadow: 0px 1px 13px 1px rgba(200,200,200,0.64);
+	-moz-box-shadow: 0px 1px 13px 1px rgba(200,200,200,0.64);
+	box-shadow: 0px 1px 13px 1px rgba(200,200,200,0.64);
+	border-left: 20px solid white;
+	border-right: 20px solid white;
+}
+
+#lero-header {
+
+	.lero-logo {
+		margin-top: 20px;
+		height: 80px;
+
+		img {
+			height: 70px;
+		}
+	}
+
+	.lero-nav {
+		a {
+			font-size: 1.2em;
+			font-weight: 300;
+			color: grey;
+			// height:45px;
+			// line-height: 45px;
+			margin-top: 38px;
+		}
+
+		a:hover {
+			background: transparent;
+		}
+	}	
+}
+
+#lero-header.menu-active {
+	// .lero-nav {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	align-items: center;
+	// 	justify-content: center;
+	// 	flex-wrap: wrap;
+	// }
+
+	.lero-nav > a {
+		display: block;
+		width: inherit;
+		text-align: left;
+		font-size: 1.8em;
+		color: $dark-grey;
+		margin: auto;
+		margin: 50px;
+	}
+
+	.lero-nav > a:first-child {
+		margin-top: 50px;
+	}
+
+	.lero-nav > div {
+		position: relative;
+		right: 20px;
+		bottom: 20px;
+		a {
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			background: $dark-grey;
+			color: white;
+		}
+	}
+}
+
+.front-page, .clients {
+	position: relative;
+	height: 500px;
+
+	.hero {
+		height: 100%;
+		-webkit-filter: grayscale(0.7);
+		filter:grayscale(0.7);
+
+		.overlay {
+			background: black;
+			opacity: 0.5;
+		}
+
+		h1 {
+			width: 80%;
+			z-index: 10;
+		}
+	}
+
+	.heading {
+		width: 100%;
+		height: 100%;
+		color: white;
+	}
+}
+
+.main-content {
+	
+}
+
+.main-content.about {
+	height: 500px;
+}
+
+.tagline {
+	height: 100%;
+	color: $light-grey;
+	background: $red;
+
+	div:first-child {
+		width: 100%;
+		padding: $main-padding;
+		z-index: 1;
+	}
+
+	p {
+		line-height: 1.2em;
+	}
+}
+
+
+.main-content.services {
+	.service {
+		padding: 0;
+		display: flex;
+		min-height: 580px;
+
+		div {
+			margin-top: 10px;
+			margin-bottom: 10px;
+			background: $light-grey;
+			.image {
+				text-align: center;
+				i {
+					margin-top: 75px;
+					font-size: 6em;
+					color: $red;
+				}			
+			}
+
+			.text {
+				padding: 40px;
+				flex: 1;
+			}
+
+			.lero-btn {
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+
+				i {
+					transition: 0.2s ease-in transform;
+				}
+			}	
+
+			.lero-btn:hover {
+				i {
+					transform: translateX(5px);
+				}
+			}
+		}
+
+	}
+}
+
+.main-content.service-details {
+	div:first-child {
+		.text {
+			padding-left: 80px;
+		}
+	}
+
+	div:last-child > div {
+		padding: 20px;
+	}
+}
+
+footer {
+	background: $light-grey;
+	min-height: 100px;
+	padding: 20px;
+	flex-direction: column;
+
+	.copyright {
+		font-size: 1em;
+		margin-bottom: 0;
+		color: $dark-grey;
+		flex: 1;
+		opacity: 0.6;
+	}
+
+	a {
+		color: $dark-grey;
+		font-size: 1.1em;
+		margin: 0;
+		margin-left: 5px;
+		margin-right: 5px;
+
+		i {
+			transform: translateY(2px);
+		}
+	}
+
+	a:hover {
+		color: $red;
+	}
+}
+
+.main-content.clients-info {
+	.client-info {
+
+		img {
+			width: 40%;
+		}
+	}
+}
+
+.main-content.results {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	height: 800px;
+
+	.background-image-container {
+		height: 300px;
+	}
+
+	.text {
+
+	}
+}
+
+.timeline:before {
+	position: relative;
+}
+
+.timeline {
+	width: inherit;
+	margin: 15px;
+
+	.column {
+		margin: 0;
+
+		.title h1:before {
+			border: 3px solid transparent;
+		}
+
+		.title h1 {
+			font-size: 80px;
+		}
+	}
+}
+
+.contact-info {
+	margin-top: 20px;
+	.info {
+		display: block;
+		margin: 0;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		color: $dark-grey;
+		font-size: 1.4em;
+	}
+
+	a:hover {
+		color: $red;
+	}
+}
+
+.contact-form {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+
+
+@media screen and (min-width: 600px) {
+	.front-page {
+		
+	}
+
+	#lero-header {
+
+		.lero-logo {
+			margin-top: 0px;
+
+			img {
+				height: 120px;
+			}
+		}
+
+		.translate-buttons {
+			top: 0px;
+			right: 15px;
+			position: absolute;
+		}
+
+		.lero-nav {
+			a {
+				height:45px;
+				line-height: 45px;
+				margin-top: 38px;
+			}
+
+			a:hover {
+				background: transparent;
+			}
+		}	
+	}
+
+	.tagline {
+		div:first-child {
+			padding: $main-padding*2;
+		}
+	}
+
+	.translate-buttons {
+		#translate-primary, #translate-secondary {
+			padding: 0;
+			width: 27px;
+			min-width: 27px !important;
+		}
+	}
+
+
+	.timeline:before {
+		position: absolute;
+	}
+
+	.timeline {
+		.column {
+			margin: 40px 40px 40px 120px;
+
+			.title h1:before {
+				border: 3px solid #c5091d;
+			}
+
+			.title h1 {
+				font-size: 100px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+
+	.front-page {
+		
+	}
+
+
+	.tagline {
+		div:first-child {
+			padding: $main-padding*3;
+		}
+	}
+
+	.main-content.services {
+
+		.service > div{
+			margin: 10px;
+		}
+
+		.service:first-child > div{
+			margin-left: 0;
+		}
+
+		.service:last-child > div{
+			margin-right: 0;
+		}
+	}
+
+	footer {
+		flex-direction: row;
+
+		.copyright {
+			margin: 0;
+		}
+		
+	}
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}
